@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chill Out calming app</title>
+        <meta name="description" content="Chill Out app for Anna Varner in WDD 330: Web Frontend Development II at BYU-I">
+        <link rel="shortcut icon" href="./images/favicon.ico">  
+        <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
+        <link rel="stylesheet" href="./styles/base.css">
+        <script src="../scripts/check-select.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="hamburger">
+                  <div class="menu_icon">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                  </div>
+                </div>
+                <div class="stats">
+                    <h3>Stats:</h3>
+                    <ul>
+                        <li>Backgrounds: <span id="calm-stat"></span></li>
+                        <li>Affirmations: <span id="affirm-stat"></span></li>
+                        <li>Breathing: <span id="breath-stat"></span></li>
+                        <li>Music: <span id="music-stat"></span></li>
+                        <li>Total Times Using App: <span id="total-access"></span></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="flex">
+                <figure>
+                    <img src="../images/penguin.webp" alt="an animated penguin" class="logo">
+                    <h1>Choose Your Chill</h1>
+                </figure>
+
+                <form id="form" class="select-options">
+                    <fieldset name="backgrounds">
+                        <input type="checkbox" id="bg-checkbox" onClick="showBgOptions()"> <img src="./images/logos/backgrounds.jpg" alt="a beach scene"></input>
+                        <div class="background-options"></div>
+                    </fieldset>
+                    
+                    <fieldset name="affirmations">
+                        <input type="checkbox" id="affirm"><img src="./images/logos/affirmations.jpg" alt="a smiling sun"></input>
+                    </fieldset>
+                    <fieldset name="breathing">
+                        <input type="checkbox" id="breathe"><img src="./images/logos/breathe.jpg" alt="a girl meditating"></input>
+                    </fieldset>
+                    <fieldset name="sounds">
+                        <input type="checkbox" id="sounds-checkbox" onClick="showSoundOptions()"> <img src="./images/logos/soothing-sounds.jpg" alt="a picture of headphones"></input>
+                        <div class="sound-options"></div>
+                    </fieldset>
+                    </form>
+                    <button id="go-chill">Let's Chill!</button>
+            </div>
+        </main>
+
+
+
+
+
+        <footer>
+            <script src="../scripts/togglemenu.js"></script>
+
+        </footer>
+    </body>
+</html>

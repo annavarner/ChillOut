@@ -1,0 +1,111 @@
+body {
+  background-color: #cef0fb;
+  max-width: 500px;
+}
+
+
+/* hamburger menu to display stats */
+.hamburger {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+}
+  
+.menu_icon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  z-index: 10;
+  position: relative;
+}
+
+.menu_icon span {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 25px;
+  background-color: #40204A;
+  transform: rotate(0);
+  transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+span.one {
+  top: 0px;
+}
+
+span.two {
+  top: 10px;
+}
+
+span.three {
+  top: 20px;
+}
+
+.clicked .one {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.clicked .two {
+  opacity: 0;
+}
+
+.clicked .three {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.stats {
+  display: none;
+}
+
+.stats.open {
+  display: block;
+  border: 2px solid darkblue;
+  background-color:white;
+  margin-left: 4rem;
+  padding-left: 1rem;
+}
+--------------------------------------------------------------------------------
+.inactive {display:none;}
+
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+figure {
+  display: flex;
+  align-items: center;
+  margin-top: -2rem;
+  margin-left: 0;
+}
+figure img{
+  width: 25vw;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+fieldset {
+  display: flex;
+  gap: 1rem;
+  border: none;
+  align-items: center;
+}
+form img {
+    width: 100px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+}
+
+button {
+  width: 150px;
+  background-color: darkblue;
+  color: white;
+  font-size: 1.5rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
