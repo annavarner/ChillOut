@@ -100,19 +100,16 @@ form img {
 }
 
 button {
-  width: 150px;
+  display: block;
+  position: fixed;
+  width: 50%;
   background-color: darkblue;
   color: white;
   font-size: 1.5rem;
   border: 2px solid white;
   border-radius: 10px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 1rem;
-}
-
-.no-display {
-  display: none;
+  right: 25%;
+  bottom: 10px;
 }
 
 audio {
@@ -122,34 +119,36 @@ audio {
   border: solid 1px #000
 }
 
-#breathe {
-  border-radius: 2rem;
-  background-color: white;
-  color: darkblue;
-  font-weight: bold;
-  width: 45%;
-  height: 15%;
-  margin-top: 50%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  animation: mymove 10s infinite;
-}
-
 #affirm{
   background-color: darkblue;
+  margin-top: 25%;
   color: white;
   text-align: center;
 }
 
+#breathe {
+
+  display: inline-table;
+  border: 2px solid darkblue;
+  border-radius: 50%;
+  background-color: white;
+  color: darkblue;
+  font-weight: bold;
+  padding: .5rem;
+  width: 30px;
+  height: 30px;
+  margin-top: 50%;
+  margin-left: 40%;
+  animation: mymove 10s infinite;
+}
+
+
+
+
 @keyframes mymove {
-  50% {font-size: 40px;}
+  50% {transform: scale(1.8);
+  }
 }
 
-#done {
-  position: fixed;
-  bottom: 10px;
-
-}
 
 .inactive {display:none;}

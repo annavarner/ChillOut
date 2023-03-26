@@ -40,7 +40,7 @@ function showSoundOptions() {
 }
 function displayChill() {
     display = document.querySelector(".selectDisplay")
-    display.classList.add("no-display")
+    display.classList.add("inactive")
     let doneButton = document.querySelector("#done")
     doneButton.classList.remove("inactive");
     //const soundChoice = document.getElementById("sounds").value;
@@ -55,12 +55,14 @@ function displayChill() {
     if (document.getElementById("affirm-checkbox").checked){
         let affirmText = document.querySelector("#affirm");
         affirmText.classList.remove("inactive");
-        affirmText.innerHTML = "affirmations will display here"
-    }
-    if (document.getElementById("breathe-checkbox").checked){
-        let breatheText = document.querySelector("#breathe");
-        breatheText.classList.remove("inactive");
-        breatheText.innerHTML = "breathe";
+        const url = "https://www.affirmations.dev";
+        apiFetch(url);
+
+        }
+    
+    if (document.getElementById("breathe-checkbox").checked) {
+        let breatheSelect = document.querySelector("#breathe");
+        breatheSelect.classList.remove("inactive");
     }
     if (document.getElementById("sounds-checkbox").checked) {
 
@@ -71,10 +73,26 @@ function displayChill() {
         </audio>`;
     }
 
+
 }
+
+
+async function apiFetch(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const affirmation = await response.json();
+            affirmText.innerHTML = affirmation;
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+            console.log(error);
+    }
+    }
 
 function endChill() {
     location.reload()
 }
-
-
