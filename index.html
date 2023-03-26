@@ -34,7 +34,7 @@
         </header>
 
         <main>
-            <div class="flex">
+            <div class="flex selectDisplay">
                 <figure>
                     <img src="../images/penguin.webp" alt="an animated penguin" class="logo">
                     <h1>Choose Your Chill</h1>
@@ -42,23 +42,30 @@
 
                 <form id="form" class="select-options">
                     <fieldset name="backgrounds">
-                        <input type="checkbox" id="bg-checkbox" onClick="showBgOptions()"> <img src="./images/logos/backgrounds.jpg" alt="a beach scene"></input>
+                        <input type="checkbox" id="bg-checkbox" onClick="showBgOptions()"> 
+                        <img src="./images/logos/backgrounds.jpg" alt="a beach scene"></input>
                         <div class="background-options"></div>
                     </fieldset>
                     
                     <fieldset name="affirmations">
-                        <input type="checkbox" id="affirm"><img src="./images/logos/affirmations.jpg" alt="a smiling sun"></input>
+                        <input type="checkbox" id="affirm-checkbox"><img src="./images/logos/affirmations.jpg" alt="a smiling sun"></input>
                     </fieldset>
                     <fieldset name="breathing">
-                        <input type="checkbox" id="breathe"><img src="./images/logos/breathe.jpg" alt="a girl meditating"></input>
+                        <input type="checkbox" id="breathe-checkbox"><img src="./images/logos/breathe.jpg" alt="a girl meditating"></input>
                     </fieldset>
                     <fieldset name="sounds">
                         <input type="checkbox" id="sounds-checkbox" onClick="showSoundOptions()"> <img src="./images/logos/soothing-sounds.jpg" alt="a picture of headphones"></input>
                         <div class="sound-options"></div>
                     </fieldset>
                     </form>
-                    <button id="go-chill">Let's Chill!</button>
+                    <button id="go-chill" onClick="displayChill()">Let's Chill!</button>
             </div>
+            <div class="chillDisplay">
+                <p class="inactive" id="affirm"></p>
+                <p class="inactive" id="breathe"></p>
+                <button class="inactive" id="done" onClick="endChill()">I'm done!</button>
+            </div>
+
         </main>
 
 

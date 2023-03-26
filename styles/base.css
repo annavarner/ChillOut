@@ -1,6 +1,7 @@
 body {
   background-color: #cef0fb;
-  max-width: 500px;
+  background-size: auto;
+
 }
 
 
@@ -65,7 +66,7 @@ span.three {
   padding-left: 1rem;
 }
 --------------------------------------------------------------------------------
-.inactive {display:none;}
+
 
 
 
@@ -105,7 +106,50 @@ button {
   font-size: 1.5rem;
   border: 2px solid white;
   border-radius: 10px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   margin-top: 1rem;
 }
+
+.no-display {
+  display: none;
+}
+
+audio {
+  width: 200px;
+  height: 100px;
+  display: block;
+  border: solid 1px #000
+}
+
+#breathe {
+  border-radius: 2rem;
+  background-color: white;
+  color: darkblue;
+  font-weight: bold;
+  width: 45%;
+  height: 15%;
+  margin-top: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  animation: mymove 10s infinite;
+}
+
+#affirm{
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+}
+
+@keyframes mymove {
+  50% {font-size: 40px;}
+}
+
+#done {
+  position: fixed;
+  bottom: 10px;
+
+}
+
+.inactive {display:none;}
