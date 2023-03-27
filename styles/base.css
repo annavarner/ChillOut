@@ -113,10 +113,12 @@ button {
 }
 
 audio {
-  width: 200px;
-  height: 100px;
+  width: 50%;
   display: block;
-  border: solid 1px #000
+  position: fixed;
+  right: 25%;
+  bottom: 10%;
+
 }
 
 #affirm{
@@ -126,7 +128,7 @@ audio {
   text-align: center;
 }
 
-#breathe {
+.breathe {
 
   display: inline-table;
   border: 2px solid darkblue;
