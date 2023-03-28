@@ -42,19 +42,34 @@
 
                 <form id="form" class="select-options">
                     <fieldset name="backgrounds">
-                        <input type="checkbox" id="bg-checkbox" onClick="showBgOptions()"> 
-                        <img src="./images/logos/backgrounds.jpg" alt="a beach scene"></input>
+                        <input type="checkbox" id="bg-checkbox" onClick="showBgOptions()">
+                            <label for="bg-checkbox">
+                                <img src="./images/logos/backgrounds.jpg" alt="a beach scene, select for background options">
+                            </label> 
+                        </input>
                         <div class="background-options"></div>
                     </fieldset>
                     
                     <fieldset name="affirmations">
-                        <input type="checkbox" id="affirm-checkbox"><img src="./images/logos/affirmations.jpg" alt="a smiling sun"></input>
+                        <input type="checkbox" id="affirm-checkbox">
+                            <label for="affirm-checkbox">
+                                <img src="./images/logos/affirmations.jpg" alt="a smiling sun, select for affirmations">
+                            </label>
+                        </input>    
                     </fieldset>
                     <fieldset name="breathing">
-                        <input type="checkbox" id="breathe-checkbox"><img src="./images/logos/breathe.jpg" alt="a girl meditating"></input>
+                        <input type="checkbox" id="breathe-checkbox">
+                            <label for="breathe-checkbox">
+                                <img src="./images/logos/breathe.jpg" alt="a girl meditating, select for guided breathing">
+                            </label>
+                        </input>
                     </fieldset>
                     <fieldset name="sounds">
-                        <input type="checkbox" id="sounds-checkbox" onClick="showSoundOptions()"> <img src="./images/logos/soothing-sounds.jpg" alt="a picture of headphones"></input>
+                        <input type="checkbox" id="sounds-checkbox" onClick="showSoundOptions()"> 
+                            <label for="sounds-checkbox">
+                                <img src="./images/logos/soothing-sounds.jpg" alt="a picture of headphones, select for sound options">
+                            </label>
+                        </input>
                         <div class="sound-options"></div>
                     </fieldset>
                     </form>

@@ -22,7 +22,7 @@ function showSoundOptions() {
         `<p>Choose Your Sounds:</p>
         <select name="sounds" id="sounds">
             <option value="light-rain">Light Rain</option>
-            <option value="brahams-lullaby">Brahm's Lullaby</option>
+            <option value="brahms-lullaby">Brahm's Lullaby</option>
             <option value="crickets">Crickets and Thunder</option>
             <option value="greensleeves">Greensleeves</option>
             <option value="heavy-rain">Heavy Rain</option>
@@ -61,9 +61,9 @@ function displayChill() {
             })
             .then (function (jsonObject) {
                 const affirmations = jsonObject['affirmations'];
+                const randomAffirmation = () => affirmations[Math.floor(Math.random() * affirmations.length)];
+                affirmText.innerHTML = randomAffirmation;
             })
-        const randomAffirmation = () => affirmations[Math.floor(Math.random() * affirmations.length)];
-        affirmText.innerHTML = randomAffirmation;
     }
     
     if (document.getElementById("breathe-checkbox").checked) {
