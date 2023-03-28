@@ -1,3 +1,5 @@
+import affirmations from "./affirmations";
+
 function showBgOptions() {
     if (document.getElementById("bg-checkbox").checked){
         let options = document.querySelector(".background-options");
@@ -54,7 +56,8 @@ function displayChill() {
     if (document.getElementById("affirm-checkbox").checked){
         let affirmText = document.querySelector(".affirm");
         affirmText.classList.remove("inactive");
-        apiFetch();
+        const randomAffirmation = () => affirmations[Math.floor(Math.random() * affirmations.length)];
+        affirmText.innerHTML = randomAffirmation;
         }
     
     if (document.getElementById("breathe-checkbox").checked) {
@@ -73,27 +76,6 @@ function displayChill() {
 
 
 }
-
-
-async function apiFetch() {
-    try {
-        const response = await fetch("https://www.affirmations.dev", {  
-            headers: {
-                Accept: "application/json"
-            }
-        });
-        if (response.ok) {
-            const affirmation = await response.json();
-            affirmText.innerHTML = affirmation;
-        }
-        else {
-            throw Error(await response.text());
-        }
-    }
-    catch (error) {
-            console.log(error);
-    }
-    }
 
 function endChill() {
     window.location.reload();
