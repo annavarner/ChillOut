@@ -1,3 +1,5 @@
+
+
 function showBgOptions() {
     if (document.getElementById("bg-checkbox").checked){
         let options = document.querySelector(".background-options");
