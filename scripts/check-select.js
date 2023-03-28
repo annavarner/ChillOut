@@ -56,15 +56,18 @@ function displayChill() {
     if (document.getElementById("affirm-checkbox").checked){
         let affirmText = document.querySelector(".affirm");
         affirmText.classList.remove("inactive");
-        const requestUrl = '.json/affirmations.json'
+        const requestUrl = './json/affirmations.json'
         fetch(requestUrl)
             .then (function (response) {
                 return response.json();
             })
             .then (function (jsonObject) {
                 const affirmations = jsonObject['affirmations'];
-                const randomAffirmation = () => affirmations[Math.floor(Math.random() * affirmations.length)];
-                affirmText.innerHTML = randomAffirmation;
+                const randomIndex = Math.floor(Math.random() * affirmations.length);
+                const randomKey = JSON.stringify(affirmations[randomIndex]);
+                console.log(randomKey);
+                // randomAffirmation = () => {affirmations[Math.floor(Math.random() * affirmations.length)]};
+                affirmText.innerHTML = randomKey.slice(16, -2);
             })
     }
     

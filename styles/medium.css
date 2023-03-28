@@ -1,19 +1,22 @@
 /* css for medium size screen/tablet */
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 740px) {
 
-    h1 {
+    body {
+        background-size: cover;
+        margin-left: 3rem;
+    }
+    h1, button {
         font-size: 2.5rem;
-      }
-
-
-
-
-
-
-
-
-
-
+    }
+    form img {
+        width: 150px;
+    }
+    fieldset div p {
+        font-size: 1.7rem;
+    }
+    form select {
+        font-size: 1.5rem;
+    }
 
 
 
@@ -26,3 +29,13 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+

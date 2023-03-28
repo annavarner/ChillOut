@@ -121,9 +121,12 @@ audio {
 
 }
 
-#affirm{
+.affirm{
   background-color: darkblue;
+  border: 2px solid white;
   margin-top: 25%;
+  border-radius: 10px;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
