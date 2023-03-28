@@ -1,5 +1,3 @@
-import affirmations from "./affirmations";
-
 function showBgOptions() {
     if (document.getElementById("bg-checkbox").checked){
         let options = document.querySelector(".background-options");
@@ -56,9 +54,17 @@ function displayChill() {
     if (document.getElementById("affirm-checkbox").checked){
         let affirmText = document.querySelector(".affirm");
         affirmText.classList.remove("inactive");
+        const requestUrl = '.json/affirmations.json'
+        fetch(requestUrl)
+            .then (function (response) {
+                return response.json();
+            })
+            .then (function (jsonObject) {
+                const affirmations = jsonObject['affirmations'];
+            })
         const randomAffirmation = () => affirmations[Math.floor(Math.random() * affirmations.length)];
         affirmText.innerHTML = randomAffirmation;
-        }
+    }
     
     if (document.getElementById("breathe-checkbox").checked) {
         let breatheSelect = document.querySelector(".breathe");
