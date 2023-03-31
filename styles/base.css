@@ -1,6 +1,10 @@
+
+
 body {
   background-color: #cef0fb;
   background-size: auto;
+  font-family: 'Quicksand', sans-serif;
+
 
 }
 
@@ -78,6 +82,7 @@ figure {
   display: flex;
   align-items: center;
   margin-top: -2rem;
+  margin-bottom: auto;
   margin-left: 0;
 }
 figure img{
@@ -91,7 +96,11 @@ fieldset {
   display: flex;
   gap: 1rem;
   border: none;
-  align-items: center;
+  margin-bottom: -15px;
+}
+
+fieldset div p {
+  margin-bottom: .2rem;
 }
 form img {
     width: 100px;
@@ -105,13 +114,18 @@ button {
   width: 50%;
   background-color: darkblue;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 7px;
   right: 25%;
   bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
 
+.grid {
+  display: grid;
+  grid-template-rows: 20vh 20vh 20vh 20vh;
+}
 audio {
   width: 50%;
   display: block;
@@ -123,16 +137,21 @@ audio {
 
 .affirm{
   background-color: darkblue;
-  border: 2px solid white;
-  margin-top: 25%;
-  border-radius: 10px;
-  font-size: 1.5rem;
   color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  position: absolute;
+  justify-self: center;
   text-align: center;
+  width: fit-content;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .breathe {
-
+  grid-row: 3;
   display: inline-table;
   border: 2px solid darkblue;
   border-radius: 50%;
@@ -142,7 +161,7 @@ audio {
   padding: .5rem;
   width: 30px;
   height: 30px;
-  margin-top: 50%;
+  bottom: 30%;
   margin-left: 40%;
   animation: mymove 10s infinite;
 }

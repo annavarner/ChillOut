@@ -4,7 +4,7 @@ function showBgOptions() {
     if (document.getElementById("bg-checkbox").checked){
         let options = document.querySelector(".background-options");
         options.innerHTML = 
-        `<p> Choose Your Scene:</p>
+        `<p> <strong>Choose Your Scene: </strong></p>
         <select name="background" id="bg">
             <option value="starry_sky">Starry Sky</option>
             <option value="rainbow_waterfall">Rainbow Waterfall</option>
@@ -21,7 +21,7 @@ function showSoundOptions() {
     if (document.getElementById("sounds-checkbox").checked){
         let options = document.querySelector(".sound-options");
         options.innerHTML = 
-        `<p>Choose Your Sounds:</p>
+        `<p><strong>Choose Your Sounds: </strong></p>
         <select name="sounds" id="sounds">
             <option value="light-rain">Light Rain</option>
             <option value="brahms-lullaby">Brahm's Lullaby</option>
@@ -37,12 +37,36 @@ function showSoundOptions() {
         let options = document.querySelector(".sound-options");
         options.innerHTML = ``
     };
+}    
+function showAffirmOptions(){
+    if (document.getElementById("affirm-checkbox").checked){
+        let options = document.querySelector(".affirm-options");
+        options.innerHTML = `<p>We'll think positive thoughts together!</p>`
+    }
+    else {
+        let options = document.querySelector(".affirm-options");
+        options.innerHTML = ``
+    }
 }
+function breatheOptions(){
+    if (document.getElementById("breathe-checkbox").checked){
+        let options = document.querySelector(".breathe-options");
+        options.innerHTML = `<p>Let's do some guided breathing!</p>`
+    }
+    else {
+        let options = document.querySelector(".breathe-options");
+        options.innerHTML = ``
+    }
+}
+
 function displayChill() {
+    hamburger = document.querySelector(".hamburger")
+    hamburger.classList.add("inactive");
     display = document.querySelector(".selectDisplay");
     display.classList.add("inactive");
     chillDisplay = document.querySelector(".chillDisplay");
     chillDisplay.classList.remove("inactive");
+
 
     let doneButton = document.querySelector("#done");
     doneButton.classList.remove("inactive");
@@ -56,19 +80,8 @@ function displayChill() {
     if (document.getElementById("affirm-checkbox").checked){
         let affirmText = document.querySelector(".affirm");
         affirmText.classList.remove("inactive");
-        const requestUrl = './json/affirmations.json'
-        fetch(requestUrl)
-            .then (function (response) {
-                return response.json();
-            })
-            .then (function (jsonObject) {
-                const affirmations = jsonObject['affirmations'];
-                const randomIndex = Math.floor(Math.random() * affirmations.length);
-                const randomKey = JSON.stringify(affirmations[randomIndex]);
-                console.log(randomKey);
-                // randomAffirmation = () => {affirmations[Math.floor(Math.random() * affirmations.length)]};
-                affirmText.innerHTML = randomKey.slice(16, -2);
-            })
+        getAffirmation(affirmText);
+        
     }
     
     if (document.getElementById("breathe-checkbox").checked) {
@@ -86,6 +99,22 @@ function displayChill() {
     }
 
 
+}
+function getAffirmation(affirmText){
+    const requestUrl = './json/affirmations.json'
+    fetch(requestUrl)
+    .then (function (response) {
+        return response.json();
+    })
+    .then (function (jsonObject) {
+        const affirmations = jsonObject['affirmations'];
+        getRandom();
+        setInterval(getRandom, 15000);
+        function getRandom() {
+            const randomIndex = Math.floor(Math.random() * affirmations.length);
+            const randomKey = JSON.stringify(affirmations[randomIndex]);
+            affirmText.innerHTML = randomKey.slice(16, -2)}
+    })
 }
 
 function endChill() {

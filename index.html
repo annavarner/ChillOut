@@ -6,7 +6,9 @@
         <title>Chill Out calming app</title>
         <meta name="description" content="Chill Out app for Anna Varner in WDD 330: Web Frontend Development II at BYU-I">
         <link rel="shortcut icon" href="./images/favicon.ico">  
-        <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/base.css">
         <link rel="stylesheet" href="./styles/medium.css">
         <script src="./scripts/check-select.js"></script>
@@ -52,17 +54,19 @@
                     </fieldset>
                     
                     <fieldset name="affirmations">
-                        <input type="checkbox" id="affirm-checkbox">
+                        <input type="checkbox" id="affirm-checkbox" onClick="showAffirmOptions()">
                             <label for="affirm-checkbox">
                                 <img src="./images/logos/affirmations.jpg" alt="a smiling sun, select for affirmations">
                             </label>
+                            <div class="affirm-options"></div>
                         </input>    
                     </fieldset>
                     <fieldset name="breathing">
-                        <input type="checkbox" id="breathe-checkbox">
+                        <input type="checkbox" id="breathe-checkbox" onClick="breatheOptions()">
                             <label for="breathe-checkbox">
                                 <img src="./images/logos/breathe.jpg" alt="a girl meditating, select for guided breathing">
                             </label>
+                            <div class="breathe-options"></div>
                         </input>
                     </fieldset>
                     <fieldset name="sounds">
@@ -76,7 +80,7 @@
                     </form>
                     <button id="go-chill" onClick="displayChill()">Let's Chill!</button>
             </div>
-            <div class="chillDisplay inactive">
+            <div class="chillDisplay inactive grid">
                 <p class="inactive affirm"></p>
                 <span class="inactive breathe">
                     <p>breathe</p>

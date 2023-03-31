@@ -2,11 +2,17 @@
 @media only screen and (min-width: 740px) {
 
     body {
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
         background-size: cover;
-        margin-left: 3rem;
+
     }
     h1, button {
         font-size: 2.5rem;
+    }
+    figure img {
+        max-width: 200px;
     }
     form img {
         width: 150px;
@@ -15,7 +21,7 @@
         font-size: 1.7rem;
     }
     form select {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
 
