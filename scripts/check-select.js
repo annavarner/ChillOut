@@ -1,5 +1,4 @@
 
-
 function showBgOptions() {
     if (document.getElementById("bg-checkbox").checked){
         let options = document.querySelector(".background-options");
@@ -60,8 +59,10 @@ function breatheOptions(){
 }
 
 function displayChill() {
-    hamburger = document.querySelector(".hamburger")
-    hamburger.classList.add("inactive");
+    footer = document.querySelector(".footer");
+    footer.classList.add("inactive");
+    // hamburger = document.querySelector(".hamburger")
+    // hamburger.classList.add("inactive");
     display = document.querySelector(".selectDisplay");
     display.classList.add("inactive");
     chillDisplay = document.querySelector(".chillDisplay");
@@ -121,3 +122,4 @@ function endChill() {
     window.location.reload();
 
 }
+

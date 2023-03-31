@@ -81,8 +81,6 @@ span.three {
 figure {
   display: flex;
   align-items: center;
-  margin-top: -2rem;
-  margin-bottom: auto;
   margin-left: 0;
 }
 figure img{
@@ -91,6 +89,11 @@ figure img{
 
 h1 {
   font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 fieldset {
   display: flex;
@@ -114,12 +117,13 @@ button {
   width: 50%;
   background-color: darkblue;
   color: white;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.3rem;
   border: 2px solid white;
   border-radius: 7px;
   right: 25%;
-  bottom: 10px;
-  font-family: 'Quicksand', sans-serif;
+  margin-top: 15px;
+  bottom: 2.5rem;
 }
 
 .grid {
@@ -131,7 +135,7 @@ audio {
   display: block;
   position: fixed;
   right: 25%;
-  bottom: 10%;
+  bottom: 15%;
 
 }
 
@@ -166,7 +170,10 @@ audio {
   animation: mymove 10s infinite;
 }
 
-
+footer {
+  position: absolute;
+  bottom: 0;
+}
 
 
 @keyframes mymove {
