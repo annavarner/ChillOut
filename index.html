@@ -30,7 +30,6 @@
                             <label for="bg-checkbox">
                                 <img src="./images/logos/backgrounds.jpg" alt="a beach scene, select for background options">
                             </label> 
-                        </input>
                         <div class="background-options"></div>
                     </fieldset>
                     
@@ -39,8 +38,7 @@
                             <label for="affirm-checkbox">
                                 <img src="./images/logos/affirmations.jpg" alt="a smiling sun, select for affirmations">
                             </label>
-                            <div class="affirm-options"></div>
-                        </input>    
+                            <div class="affirm-options"></div>    
                     </fieldset>
                     <fieldset name="breathing">
                         <input type="checkbox" id="breathe-checkbox" onClick="breatheOptions()">
@@ -48,14 +46,12 @@
                                 <img src="./images/logos/breathe.jpg" alt="a girl meditating, select for guided breathing">
                             </label>
                             <div class="breathe-options"></div>
-                        </input>
                     </fieldset>
                     <fieldset name="sounds">
                         <input type="checkbox" id="sounds-checkbox" onClick="showSoundOptions()"> 
                             <label for="sounds-checkbox">
                                 <img src="./images/logos/soothing-sounds.jpg" alt="a picture of headphones, select for sound options">
                             </label>
-                        </input>
                         <div class="sound-options"></div>
                     </fieldset>
                     </form>
@@ -64,10 +60,10 @@
             <!-- Render chill screen using selected options -->
             <div class="chillDisplay inactive grid">
                 <p class="inactive affirm"></p>
-                <span class="inactive breathe">
+                <div class="inactive breathe">
                     <p>breathe</p>
-                </span>
-                <span class="inactive sound"></span>
+                </div>
+                <div class="inactive sound"></div>
                 <button class="inactive" id="done" onClick="endChill(); getTime()">I'm done!</button>
             </div>
             <!-- Render finished screen-->

@@ -15,7 +15,7 @@
         max-width: 200px;
     }
     form img {
-        width: 150px;
+        max-width: 150px;
     }
     fieldset div p {
         font-size: 1.7rem;
@@ -28,25 +28,21 @@
     }
     .affirm {
         font-size: 1.5rem;
-      }
-
-
-
-
-
-
-
-
-
-
+    }
+    .finish {
+        left: 20%;
+        right: 20%;
+        font-size: 2rem;
+    }
 
 }
+@media only screen and (min-width: 1000px) {
 
+    form img {
+        max-width: 125px;
+    }
 
-
-
-
-
+}
 
 
 
