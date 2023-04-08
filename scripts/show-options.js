@@ -10,6 +10,8 @@ function showBgOptions() {
             <option value="clouds">Clouds</option>
             <option value="flying_birds">Flying Birds</option>
             <option value="sunset_beach">Sunset Beach</option>
+            <option value="kittens">Kittens</option>
+            <option value="cherry_blossoms">Cherry Blossoms</option>
         </select> `
 }   else {
         let options = document.querySelector(".background-options");
@@ -25,6 +27,7 @@ function showSoundOptions() {
             <option value="light-rain">Light Rain</option>
             <option value="brahms-lullaby">Brahm's Lullaby</option>
             <option value="crickets">Crickets and Thunder</option>
+            <option value="cat-purring">Cat Purring</option>
             <option value="greensleeves">Greensleeves</option>
             <option value="heavy-rain">Heavy Rain</option>
             <option value="ocean-waves">Ocean Waves</option>
