@@ -3,7 +3,8 @@ function endChill() {
     document.body.style = null;
     let affirm = document.querySelector(".affirm");
     affirm.classList.add("inactive");
-    clearInterval(affirmInterval);
+    if (affirmInterval > 0) {
+        clearInterval(affirmInterval)};
     let breathe = document.querySelector(".breathe");
     breathe.classList.add("inactive");
     let sound = document.querySelector(".sound");

@@ -1,3 +1,4 @@
+let affirmInterval = 0;
 function validateCheckboxes() {
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
